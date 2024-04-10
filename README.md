@@ -1,2 +1,2 @@
-# leetcode
-Project with several solutions a leetcode.org problems
+# LeetCode
+Project with several solutions a [LeetCode](https://leetcode.com/) problems
