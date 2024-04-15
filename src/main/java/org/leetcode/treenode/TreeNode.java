@@ -1,11 +1,14 @@
 package org.leetcode.treenode;
 
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class TreeNode {
     int val;
     public TreeNode left;
     public TreeNode right;
 
-    TreeNode() {
+    public TreeNode() {
     }
 
     TreeNode(int val) {
@@ -37,7 +40,7 @@ public class TreeNode {
 
     public TreeNode fromArray(Integer[] tree) {
         if (tree.length == 0) return null;
-       /* TreeNode root = new TreeNode((int) tree[0]);
+        TreeNode root = new TreeNode(tree[0]);
         Queue<TreeNode> q = new LinkedList<>();
         q.add(root);
         for (int i = 1; i < tree.length; i++) {
@@ -49,13 +52,13 @@ public class TreeNode {
                 }
             } else if (node.right == null) {
                 if (tree[i] != null) {
-                    node.right = new TreeNode((int) tree[i]);
+                    node.right = new TreeNode(tree[i]);
                     q.add(node.right);
                 }
                 q.remove();
             }
-        }*/
-        return new TreeNode();
+        }
+        return root;
     }
 
     public void show(TreeNode root) {
@@ -80,5 +83,13 @@ public class TreeNode {
             traversePreOrder(sb, paddingForBoth, pointerForLeft, node.left);
             traversePreOrder(sb, paddingForBoth, pointerForRight, node.right);
         }
+    }
+
+    public int getVal() {
+        return val;
+    }
+
+    public void setVal(int val) {
+        this.val = val;
     }
 }
